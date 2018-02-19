@@ -1,0 +1,115 @@
+@require "app/styles/charte"
+
+#character
+	height: 80vh
+
+#gender-selection-menu
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	width: 70%
+	text-align: center
+	margin: auto
+	:hover
+		cursor: url(/images/hover.cur), pointer
+
+#character-buttons
+	display: flex
+	justify-content: space-between
+	width: 60%
+	margin: auto
+	margin-top: 4vh
+.previous-next
+	font-family: inherit
+	font-size: 1em
+	color: $silver
+	background-color: $dark
+
+.checked
+	color: $blue
+	background-color: rgba( 0, 0, 0, .5)
+	border: .5vh solid $blue
+
+.checked2
+	color: $blue
+
+.character-creation-title
+	width: 80%
+	margin: 2vh auto
+	font-size: 4vh
+	text-align: center
+
+	p
+		color: $red
+
+		span
+			font-size: 3vh
+
+form label
+	font-size: 5vh
+	border: .5vh solid $silver
+	padding: 1.5vh
+
+	&:hover span
+		color: $blue
+
+input[type="radio"]
+	display: none
+
+.previous-next, input[type="submit"]
+	cursor: url(/images/hover.cur), pointer
+	border: 1px solid $silver
+
+	&:hover
+		color: $blue
+		border: 1px solid $blue
+
+#inputcharacter
+	display: block
+	font-family: inherit
+	width: 60%
+	text-align: center
+	margin: 4vh auto
+	font-size: 4vh
+	background-color: $silver
+	border: .5vh solid $silver
+	color: $darker
+	&::placeholder
+		color: $red
+
+	&:focus
+		border: .5vh solid $blue
+
+	&:hover
+		cursor: url(/images/input.cur) 30 30, text
+
+// Responsive mobile
+@media (orientation: portrait)
+	#character
+		&-buttons
+			justify-content: none
+			flex-direction: column
+			width: 80%
+
+			.previous-next
+				margin-bottom: 2vh
+
+		.character-creation-title
+			font-size: 2.5vh
+			width: 90%
+
+			p
+				font-size: 2.5vh
+			span
+				font-size: 2vh
+
+		#gender-selection-menu
+			width: 90%
+
+			div
+				font-size: 3vh
+
+		#inputcharacter
+			width: 80%
+			margin: 2vh auto
+			font-size: 2.5vh

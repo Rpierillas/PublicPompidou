@@ -1,0 +1,28 @@
+@require "app/styles/charte"
+
+.action
+	flex-grow: 1
+	font-size: 3vh
+	text-align: center
+	margin-top: 1vh
+
+	&-text
+		border: 0
+		background-color: rgba( 0, 0, 0, 0.5 )
+		border: .5vh solid $silver
+		width: 98%
+		color: $silver
+		font: inherit
+		height: 7.5vh
+
+		&:hover
+			color: $blue
+			border: .5vh solid $blue
+			cursor: url(/images/hover.cur), pointer
+			background-color: rgba( 0, 0, 0, 0.9 )
+
+// Responsive mobile
+@media (orientation: portrait)
+		.action
+			font-size: 2.3vh
+			line-height: 2.3vh

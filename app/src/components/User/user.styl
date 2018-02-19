@@ -1,0 +1,48 @@
+@require "app/styles/charte"
+
+.user
+	padding: 10px
+	border: 2px solid $blue
+	width: 50%
+	margin: 30px auto
+
+	&-email
+		font-size: 1.3em
+		color: $blue
+
+	&-id
+		font-size: 1em
+		padding-top: 10px
+
+	&-admin
+		font-size: 1em
+
+	&-makeAdmin
+		font-size: 1em
+		color: $red
+		border: none
+		padding: 0
+
+	&-games
+		font-size: 1em
+
+	&-delete
+		margin: 0.5em
+		border: 1px solid $silver
+		background: $dark
+		color: $silver
+		padding: 1vh 0
+		font-family: "VT323"
+		font-size: 3vh
+		width: 30vh
+		transition: border .2s, background .2s, color .2s
+		text-align: center
+
+		&:hover
+			color: $red
+			cursor: url(/images/hover.cur), pointer
+			border: 1px solid $red
+			background: $light-blue
+
+@media (orientation: portrait)
+	// Responsive mobile

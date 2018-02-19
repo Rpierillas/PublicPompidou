@@ -1,0 +1,148 @@
+@require "app/styles/charte"
+
+#login
+	height: 80vh
+	text-align: center
+
+	&-title
+		margin: 2vh auto
+		margin-left: 5vh
+		font-size: 5vh
+
+	&-error
+		margin: 2vh 0
+		color: $red
+		font-size: 2vh
+
+	&-responsability
+		padding-bottom: 2vh
+		border-bottom: 1px solid $silver
+		font-style: italic
+		font-size: 2.5vh
+		color: $red
+
+	&-text
+		padding-bottom: .5vh
+
+	&-register
+		padding-top: 3vh
+		border-top: 1px solid $silver
+
+	&-button
+		border: 1px solid $silver
+		background: $dark
+		color: $silver
+		padding: 1vh 0
+		font-family: "VT323"
+		font-size: 3vh
+		margin: 2vh auto
+		width: 30vh
+		transition: border .2s, background .2s, color .2s
+
+		&:hover
+			color: $red
+			cursor: url(/images/hover.cur), pointer
+			border: 1px solid $red
+			background: $light-blue
+
+		&-validate
+			font-size: 3.5vh
+			font-family: "VT323"
+			background: $darker
+			color: $silver
+			position: relative
+			border: solid .1vh $silver
+			bottom: -.1vh
+			transition: border-color .2s, background .2s, color .2s
+
+			&:hover
+				border-color: $red
+				background: $light-blue
+				color: $red
+				cursor: url(/images/hover.cur), pointer
+
+	.login
+		display: block
+		margin: 1.5vh
+		background: $dark
+		text-align: center
+		padding: .5vh 0
+
+		&-block
+			display: flex
+			flex-direction: row
+			justify-content: center
+
+		&-text
+			font-size: 4vh
+			width: 30%
+
+		&-input
+			font-family: "VT323"
+			color: $silver
+			text-align: center
+			background: none
+			border: .1vh solid $gray
+			font-size: 2.5vh
+			margin-left: 4vh
+			width: 40vh
+			background-color: rgba( 0, 0, 0, 0.2 )
+			cursor: url(/images/input.cur) 30 30, text
+			transition: border .5s, background-color .5s
+
+			&:focus
+				border: .2vh solid $blue
+				background-color: rgba( 0, 0, 0, 0.5 )
+
+// Responsive mobile
+@media (orientation: portrait)
+	#login
+		&-title
+			margin: 1vh auto
+			margin-bottom: 0.5vh
+			margin-left: 5vh
+			font-size: 3.5vh
+
+		&-error
+			padding: 0 2vh
+			font-size: 1.5vh
+
+		&-responsability
+			padding: 0 2vh
+			padding-bottom: 2vh
+			line-height: 2.5vh
+
+		&-text
+			padding: 0 2vh
+			padding-bottom: .5vh
+			line-height: 2.2vh
+
+		&-register
+			padding: 0 2vh
+			padding-top: 2vh
+			font-size: 2.5vh
+			line-height: 2.5vh
+
+		&-button
+			width: 20vh
+			font-size: 2.75vh
+
+			&-validate
+				font-size: 2.7vh
+				bottom: 0
+
+		.login
+			&-block
+				display: block
+
+			&-text
+				width: 100%
+				font-size: 3.5vh
+				padding: 0 1vh
+				border: .1vh solid $silver
+				background-color: $darker
+
+			&-input
+				margin: auto
+				height: 5vh
+				width: 100%

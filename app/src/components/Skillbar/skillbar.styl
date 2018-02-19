@@ -1,0 +1,68 @@
+@require "app/styles/charte"
+
+.stat
+	&-block
+		width: 90%
+		display: flex
+		text-align: center
+		align-items: center
+
+		#responsive
+			display: flex
+			width: 100%
+
+	&-plus
+		border: 0
+		font-size: 7vh
+		vertical-align: sub
+		cursor: url(/images/hover.cur), pointer
+
+
+	&-name
+		width: 30%
+
+	&-icon
+		margin: 0 0 0 10vh
+
+	&-bar
+		&-exterior
+			width: 50%
+			box-sizing: border-box
+			height: 4.4vh
+			background-color: $darker
+			border: .5vh solid $silver
+			margin: 2vh auto
+			display: inline-block
+
+		&-interior
+			position: relative
+			top: -.3vh
+			left: -.3vh
+			font-size: 3vh
+			height: 3.5vh
+			padding-right: 1.5vh
+			padding-bottom: 4vh
+			transition-property: width
+			transition-duration: 1s
+			background-color: $silver
+			color: $blue
+			text-align: right
+
+// Responsive mobile
+@media (orientation: portrait)
+	.stat
+		&-block
+			width: 100%
+			flex-direction: column
+
+			#responsive
+				width: 100%
+
+		&-icon
+			margin: auto
+			position: relative
+			top: .75vh
+
+		&-bar
+			&-exterior
+				width: 70%

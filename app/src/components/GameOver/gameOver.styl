@@ -1,0 +1,25 @@
+@require "app/styles/charte"
+
+#gameOver
+	margin: 5vh auto
+	font-size: 5vh
+	opacity: 100%
+	width: 80%
+	text-align: center
+	color: $red
+	&-yesNo
+		font-size: 5vh
+		margin: 5vh auto
+
+		.confirm
+			border: 2px solid $silver
+			margin: 0 1.5vh
+			padding: .5vh 2vh
+			background: $dark
+			transition: color .5s, background .5s, border .5s
+
+			&:hover
+				border-color: $red
+				color: $red
+				background: $light-blue
+				cursor: url(/images/hover.cur), pointer

@@ -1,0 +1,95 @@
+@require "app/styles/charte"
+
+#description
+	width: 98%
+	display: flex
+	margin: auto
+	padding: .5vh
+	border: 1px solid $silver
+	background-color: rgba( 0, 0, 0, 0.5 )
+
+	&-leftBlock
+		background-size: 0
+		width: 75%
+		opacity: 1
+
+	&-imageText
+		position: absolute
+		display: none
+
+	&-rightBlock
+		display: flex
+		flex-direction: column
+		border: 1px solid $silver
+		padding: 0 3vh
+		width: 24.6%
+		margin-left: 1vh
+
+	&-picture
+		height: 40vh
+		margin-top: 4vh
+		border: 1px solid $silver
+		background-size: cover
+
+	&-pictureName
+		border: 1px solid $silver
+		text-align: center
+
+	&-hp
+		color: $red
+		margin-top: 1vh
+
+	&-text
+		white-space: pre-line
+		position: relative
+		padding: 2vh
+		height: 53.5vh
+		border: 1px solid $silver
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 0.5em
+			border: 1px
+			z-index: 2
+
+		&::-webkit-scrollbar-track
+			-webkit-box-shadow: inset 0 0 6px rgba( 0, 0, 0, 0.3 )
+			border: 1px $silver
+			z-index: 2
+
+
+		&::-webkit-scrollbar-thumb
+			background-color: $blue
+			outline: 1px solid $blue
+			border: 1px solid $silver
+			border-right: none
+			z-index: 2
+			padding: 4vh
+// Responsive mobile
+@media (orientation: portrait)
+	#description
+		background-color: $darker
+
+		&-leftBlock
+			background-size: cover
+			width: 100%
+
+		&-imageText
+			position: absolute
+			display: block
+			font-size: 3vh
+			opacity: .8
+			padding: 0 1vh
+			background-color: rgba(0, 0, 0, .8)
+			border: 1px solid $silver
+
+
+		&-rightBlock
+			display: none
+
+		&-text
+			margin: auto
+			font-size: 2.5vh
+			padding: 1.5vh
+			line-height: 3vh
+			background-color: rgba(0, 0, 0, .5)

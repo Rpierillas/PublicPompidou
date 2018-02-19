@@ -1,0 +1,133 @@
+@require "app/styles/charte"
+
+// Glowing effect *
+@-webkit-keyframes glowing {
+  0% { background-color: #386499; -webkit-box-shadow: 0 0 3px #386499; }
+  50% { background-color: $blue; -webkit-box-shadow: 0 0 40px $blue; }
+  100% { background-color: #386499; -webkit-box-shadow: 0 0 3px #386499; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #386499; -moz-box-shadow: 0 0 3px #386499; }
+  50% { background-color: $blue; -moz-box-shadow: 0 0 40px $blue; }
+  100% { background-color: #386499; -moz-box-shadow: 0 0 3px #386499; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #386499; box-shadow: 0 0 3px #386499; }
+  50% { background-color: $blue; box-shadow: 0 0 40px $blue; }
+  100% { background-color: #386499; box-shadow: 0 0 3px #386499; }
+}
+
+@keyframes glowing {
+  0% { background-color: #386499; box-shadow: 0 0 3px #386499; }
+  50% { background-color: $blue; box-shadow: 0 0 40px $blue; }
+  100% { background-color: #386499; box-shadow: 0 0 3px #386499; }
+}
+
+#navbar
+	background: $darker
+	position: absolute
+	top: 0
+	height: 4.3vh
+	display: flex
+	flex-direction: row
+	justify-content: left
+	width: 100%
+	border-bottom: 1px solid $silver
+
+	&-menu
+		border: 0
+		background: url("../images/tibetan_cantillation.png") no-repeat
+		background-size: 4.2vh
+		margin-right: 1vh
+		text-align: center
+		width: 4.2vh
+		font-size: 3.5vh
+		font-family: "VT323"
+		color: rgba(0, 0, 0, 0)
+		cursor: url(/images/hover.cur), pointer
+		transition: border .5s, color .5s, background .5s, background-size 0s
+
+
+	&-click
+		font-family: "VT323"
+		position: relative
+		top: 0
+		font-size: 4vh
+		border-radius: 15px
+		padding: 0 .3em 0 0
+		margin-left: .2em
+		transition: opacity 1s
+		// * Glowing effect
+		-webkit-animation: glowing 1500ms infinite
+		-moz-animation: glowing 1500ms infinite
+		-o-animation: glowing 1500ms infinite
+		animation: glowing 1500ms infinite
+
+	&-noGlow
+		font-family: "VT323"
+		position: absolute
+		top: 0
+		left: 5vh
+		font-size: 4vh
+		border-radius: 15px
+		padding: 0 .3em 0 0
+		margin-left: .2em
+		transition: opacity 1s
+
+	.list
+		border: solid 1px
+		border-color: $blue
+		cursor: pointer
+		padding: 1vh 0
+		text-align: center
+		font-size: 4vh
+		transition: background .3s, border-color .3s
+
+		&:hover
+			border-color: $red
+			color: $red
+			background: $light-blue
+			cursor: url(/images/hover.cur), pointer
+
+	.uList
+		font-family: "VT323"
+		position: absolute
+		left: -700px
+		top: 4.3vh
+		background: $darker
+		border: solid 1px $silver
+		font-size: 1.2em
+		width: 25%
+		padding: .5vh
+		transition: .5s left
+		display: flex
+		flex-direction: column
+
+	.invisible
+		opacity: 0
+
+	.visible
+		border: 1px solid $red
+		color: $red
+		background: none
+		background-color: $light-blue
+
+	.visibleUlist
+		left: 0
+
+@media (orientation: portrait)
+	#navbar
+		height: 4vh
+
+		.uList
+			width: 100%
+			top: 3.9vh
+			left: -1500px
+
+		.list
+			padding: 1.8vh 0
+
+		.visibleUlist
+			left: 0
